@@ -1,2 +1,2 @@
 # Life_at_42Bangkok
-for remote working
+For local working and awaiting for complete.
