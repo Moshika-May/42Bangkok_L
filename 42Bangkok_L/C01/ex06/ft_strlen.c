@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmahanin <kmahanin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kmahanin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/08 16:04:26 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/09 10:58:27 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/07/09 17:02:01 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/07/09 17:33:02 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	n;
+
+	n = 0;
+	while (*str != '\0')
+	{
+		str++;
+		n++;
+	}
+	return (n);
 }
+//int	main(void)
+//{
+//	ft_strlen("Safari");
+//	return (0);
+//}

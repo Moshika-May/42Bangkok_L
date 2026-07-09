@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmahanin <kmahanin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kmahanin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/08 16:04:26 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/09 10:58:27 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/07/09 15:52:08 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/07/09 16:51:32 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
+	while (*str != '\0')
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
+
+//int	main(void)
+//{
+//	char	*w;
+//
+//	w = "Orange";
+//	ft_putstr(w);
+//	return (0);
+//}
