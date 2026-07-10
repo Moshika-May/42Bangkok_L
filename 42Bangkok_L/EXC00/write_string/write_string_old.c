@@ -1,20 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   write_string_old.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/11 00:19:25 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/11 01:22:23 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/07/10 22:59:14 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/07/10 23:12:30 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	rush(int x, int y);
+#include <unistd.h>
+
+void	write_string(char *str)
+{
+	int		n;
+	char	a;
+
+	n = 0;
+	a = str[0];
+	if (a == ' ')
+	{
+		while (str[n] != '\0')
+		{
+			write(1, str, 1);
+			n++;
+		}
+	}
+	else
+	{
+		write(1, str, 1);
+	}
+	write(1, "\n", 1);
+}
 
 int	main(void)
 {
-	rush(1, 5);
-	return (0);
+	write_string("          ");
+	write_string("weg2");
+	write_string("");
 }
+// >          $
+// >          $
+// \ no new in files$
