@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/11 00:22:12 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/11 04:08:14 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/11 04:08:09 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
+
 /*
 void	rush(int x, int y)
 {
@@ -24,12 +25,13 @@ void	rush(int x, int y)
 		while (a <= x)
 		{
 			if ((b == 1 || b == y) && a == 1)
-				ft_putchar('A');
-			else if (((b == 1 || b == y) && (a > 1 && a < x)) || ((b > 1
-						&& b < y) && (a == 1 || a == x)))
-				ft_putchar('B');
+				ft_putchar('o');
+			else if ((b == 1 || b == y) && (a > 1 && a < x))
+				ft_putchar('-');
+			else if ((b > 1 && b < y) && (a == 1 || a == x))
+				ft_putchar('|');
 			else if ((b == 1 || b == y) && a == x)
-				ft_putchar('C');
+				ft_putchar('o');
 			else if (((b > 1 && b < y) && (a > 1 && a < x)))
 				ft_putchar(' ');
 			a++;
@@ -39,7 +41,7 @@ void	rush(int x, int y)
 	}
 }
 */
-void	rush03(int x, int y)
+void	rush00(int x, int y)
 {
 	int	a;
 	int	b;
@@ -51,12 +53,13 @@ void	rush03(int x, int y)
 		while (a <= x)
 		{
 			if ((b == 1 || b == y) && a == 1)
-				ft_putchar('A');
-			else if (((b == 1 || b == y) && (a > 1 && a < x)) || ((b > 1
-						&& b < y) && (a == 1 || a == x)))
-				ft_putchar('B');
+				ft_putchar('o');
+			else if ((b == 1 || b == y) && (a > 1 && a < x))
+				ft_putchar('-');
+			else if ((b > 1 && b < y) && (a == 1 || a == x))
+				ft_putchar('|');
 			else if ((b == 1 || b == y) && a == x)
-				ft_putchar('C');
+				ft_putchar('o');
 			else if (((b > 1 && b < y) && (a > 1 && a < x)))
 				ft_putchar(' ');
 			a++;
