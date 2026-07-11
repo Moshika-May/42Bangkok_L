@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/11 00:19:25 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/11 13:39:33 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/11 14:06:20 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	main(void)
 	int	x;
 	int	y;
 
-	x = 48;
-	y = 16;
+	x = 1;
+	y = 1;
 	rush(x, y);
 	return (0);
 }
