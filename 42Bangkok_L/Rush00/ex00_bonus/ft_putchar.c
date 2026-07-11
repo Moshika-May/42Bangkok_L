@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: kmahanin <kmahanin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/11 00:19:25 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/11 13:39:33 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/07/08 16:04:26 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/07/11 00:50:14 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <unistd.h>
 
-int	main(void)
+void	ft_putchar(char c)
 {
-	int	x;
-	int	y;
-
-	x = 48;
-	y = 16;
-	rush(x, y);
-	return (0);
+	write(1, &c, 1);
 }
