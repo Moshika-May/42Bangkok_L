@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmahanin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kmahanin <kmahanin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/14 13:51:34 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/14 17:31:13 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/15 19:14:05 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ void	ft_putstr_non_printable(char *str)
 	h = "0123456789abcdef";
 	while (str[i] != '\0')
 	{
-		if (str[i] < ' ' || str[i] == 127)
+		if (str[i] >= ' ' && str[i] <= '~')
+		{
+			a = str[i];
+			write(1, &a, 1);
+		}
+		else
 		{
 			write(1, "\\", 1);
 			write(1, &h[str[i] / 16], 1);
 			write(1, &h[str[i] % 16], 1);
-		}
-		else if (str[i] >= ' ' && str[i] <= '~')
-		{
-			a = str[i];
-			write(1, &a, 1);
 		}
 		i++;
 	}
@@ -39,7 +39,9 @@ void	ft_putstr_non_printable(char *str)
 /*
 int	main(void)
 {
-	char	str[] = "Hello\nHow are you?";
+	char	str[1];
+
+	str[0] = 128;
 
 	ft_putstr_non_printable(str);
 	return (0);
