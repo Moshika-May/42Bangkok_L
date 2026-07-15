@@ -6,14 +6,16 @@
 /*   By: kmahanin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 17:16:47 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/15 19:22:00 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/15 20:38:07 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	ft_strcmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	int				j;
 
 	i = 0;
 	j = 0;
@@ -27,5 +29,11 @@ int	ft_strcmp(char *s1, char *s2, unsigned int n)
 			return (j);
 		}
 	}
+	return (0);
+}
+
+int	main(void)
+{
+	printf("%d", ft_strcmp("Help_Me", "Help_My", 7));
 	return (0);
 }
