@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/14 10:06:20 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/14 13:37:43 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/14 17:03:44 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ char	*ft_strcapitalize(char *str)
 /*
 int	main(void)
 {
-	char	txt[] = "hi, how are you? 42words forty-two; fifty+and+one YEAH thIs also NeeD";
+char	txt[] = "hi,
+		how are you? 42words forty-two; fifty+and+one YEAH thIs also NeeD";
 
 	printf("%s", ft_strcapitalize(txt));
 	return (0);
