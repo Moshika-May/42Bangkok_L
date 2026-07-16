@@ -6,59 +6,55 @@
 /*   By: kmahanin <kmahanin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 13:42:53 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/15 15:41:03 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/16 22:20:08 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	condition(int nb)
+int	cond_check(long n)
 {
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return (-1);
-	}
-	if (nb < 0)
+	if (n < 0)
 	{
 		write(1, "-", 1);
-		return (-nb);
+		return (0);
 	}
-	if (nb == 0)
+	if (n == 0)
 	{
 		write(1, "0", 1);
-		return (-1);
+		return (1);
 	}
-	return (nb);
+	return (0);
 }
 
 void	ft_putnbr(int nb)
 {
-	char	n;
-	int		i;
-	int		j;
+	char			b[20];
+	unsigned int	i;
+	long			n;
 
-	i = 1;
-	nb = condition(nb);
-	if (nb < 0)
+	n = nb;
+	i = 0;
+	if (cond_check(n) == 1)
 		return ;
-	while (nb / i >= 10)
+	if (n < 0)
+		n = -n;
+	while (n > 0)
 	{
-		i *= 10;
+		b[i] = (n % 10) + '0';
+		n /= 10;
+		i++;
 	}
 	while (i > 0)
 	{
-		j = nb / i;
-		n = j + '0';
-		write(1, &n, 1);
-		nb %= i;
-		i /= 10;
+		i--;
+		write(1, &b[i], 1);
 	}
 }
 /*
 int	main(void)
 {
-	ft_putnbr(-4422);
+	ft_putnbr(2147483647);
 	return (0);
 }
 */
