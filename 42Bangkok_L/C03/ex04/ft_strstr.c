@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 13:55:27 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/16 15:18:06 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/20 11:34:53 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strstr(char *str, char *to_find)
 			return (&str[i]);
 		i++;
 	}
-	return ('\0');
+	return (0);
 }
 /*
 int	main(void)
