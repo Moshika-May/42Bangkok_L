@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmahanin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 11:54:08 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/23 13:46:03 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/24 00:14:34 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -61,6 +61,7 @@ int	ft_sqrt(int nb)
 /*
 #include <stdio.h>
 #include <stdlib.h>
+
 int	main(int argc, char **argv)
 {
 	if (argc != 2)
