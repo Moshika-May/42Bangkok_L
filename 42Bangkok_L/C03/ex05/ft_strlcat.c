@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmahanin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 14:28:53 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/20 16:52:14 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/23 16:05:16 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,16 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
-	unsigned int	a;
-	unsigned int	b;
+	unsigned int	dest_l;
+	unsigned int	src_l;
 
-	a = len(dest);
-	b = len(src);
-	if (size <= a)
-		return (size + b);
-	i = a;
+	dest_l = 0;
+	src_l = len(src);
+	while (dest[dest_l] != '\0' && dest_l < size)
+		dest_l++;
+	if (dest_l == size)
+		return (size + src_l);
+	i = dest_l;
 	j = 0;
 	while (src[j] != '\0' && i < (size - 1))
 	{
@@ -42,7 +44,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		i++;
 	}
 	dest[i] = '\0';
-	return (a + b);
+	return (dest_l + src_l);
 }
 /*
 int	main(void)
