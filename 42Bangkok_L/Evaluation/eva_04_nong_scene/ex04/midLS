@@ -1,0 +1,4 @@
+# -t for sorting by timestamp
+# -m for comma and whitespace
+# -p for appending (/) after directories only, nothing less, nothing more
+ls -tmp

@@ -1,0 +1,4 @@
+# Objective: Search for all files in the current directory and its subdirectories that end with ~ (tilde) or, start and end with # (hash)
+
+# find . \( -type f -name '*~' -exec rm -v '{}' ';' \) -or \( -type f -name '#*#' -exec rm -v '{}' ';' \)
+find . \( -type f -name '*~' -print -delete \) -or \( -type f -name '#*#' -print -delete \)
