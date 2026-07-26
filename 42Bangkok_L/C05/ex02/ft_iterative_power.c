@@ -6,13 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/22 21:31:51 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/22 21:51:26 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/26 11:51:18 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_iterative_power(int nb, int power)
 {
-	unsigned int	a;
+	int	a;
 
 	a = nb;
 	if (power == 0 || (nb == 0 && power == 0))
