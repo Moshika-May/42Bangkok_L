@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rsh02.h                                            :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/24 21:46:42 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/26 14:03:04 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/07/26 13:26:13 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/07/26 13:33:13 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RSH02_H
-# define RSH02_H
+#include <stddef.h>
+#include <stdlib.h>
 
-# include <fcntl.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-int					input_validation(int argc, char **argv);
-void				putstr(char *str);
-unsigned int		len(char *str);
-unsigned long long	atoull(char *str);
-char				*strdup(char *src);
-
-#endif
+char	*ft_convert_base(char *nbr, char *base_form, char *base_to)
+{
+}
