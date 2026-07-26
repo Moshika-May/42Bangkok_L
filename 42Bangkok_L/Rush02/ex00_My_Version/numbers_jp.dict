@@ -1,0 +1,33 @@
+0: zero
+1: ichi
+2: ni
+3: san
+4: yon
+5: go
+6: roku
+7: nana
+8: hachi
+9: kyuu
+10: juu
+11: juu ichi
+12: juu ni
+13: juu san
+14: juu yon
+15: juu go
+16: juu roku
+17: juu nana
+18: juu hachi
+19: juu kyuu
+20: ni juu
+30: san juu
+40: yon juu
+50: go juu
+60: roku juu
+70: nana juu
+80: hachi juu
+90: kyuu juu
+100: hyaku
+1000: sen
+1000000: mirion
+1000000000: birion
+1000000000000: toririon
