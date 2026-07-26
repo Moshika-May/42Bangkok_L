@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 22:39:22 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/26 14:05:45 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/27 06:12:36 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ unsigned long long	atoull(char *str)
 	return (var);
 }
 
-unsigned int	len(char *str)
+int	len(char *str)
 {
 	unsigned int	i;
 
@@ -39,7 +39,7 @@ unsigned int	len(char *str)
 	return (i);
 }
 
-char	*strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	unsigned int	i;
 	char			*dest;
@@ -47,7 +47,7 @@ char	*strdup(char *src)
 	i = 0;
 	dest = malloc(sizeof(char) * (len(src) + 1));
 	if (!dest)
-		return (NULL);
+		return (0);
 	while (src[i])
 	{
 		dest[i] = src[i];

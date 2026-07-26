@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_validation.c                                 :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ataweech <ataweech@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/26 19:47:27 by ataweech          #+#    #+#             */
-/*   Updated: 2026/07/26 19:47:28 by ataweech         ###   ########.fr       */
+/*   Created: 2026/07/26 19:47:42 by ataweech          #+#    #+#             */
+/*   Updated: 2026/07/26 19:47:43 by ataweech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
-int	is_number(char *str)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	if (!str || !str[i])
-		return (1);
-	while (str[i])
-	{
-		if (str[i] < '0' || str[i] > '9')
-			return (1);
+	while (str && str[i])
 		i++;
-	}
-	return (0);
+	return (i);
 }
 
-int	input_validation(int argc, char **argv)
+char	*ft_strdup(char *src)
 {
-	if (argc != 2 && argc != 3)
-		return (1);
-	if (argc == 2 && is_number(argv[1]))
-		return (1);
-	if (argc == 3 && is_number(argv[2]))
-		return (1);
-	return (0);
+	int		i;
+	char	*dest;
+
+	i = 0;
+	if (!src)
+		return (NULL);
+	dest = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (!dest)
+		return (NULL);
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

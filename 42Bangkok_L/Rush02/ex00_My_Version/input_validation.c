@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   input_validation.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ataweech <ataweech@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/26 19:47:27 by ataweech          #+#    #+#             */
-/*   Updated: 2026/07/26 19:47:28 by ataweech         ###   ########.fr       */
+/*   Created: 2026/07/24 20:09:35 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/07/24 22:37:23 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.h"
+#include "rsh02.h"
 
 int	is_number(char *str)
 {
 	unsigned int	i;
 
 	i = 0;
-	if (!str || !str[i])
+	if (!str[i] || !str)
 		return (1);
 	while (str[i])
 	{
