@@ -6,15 +6,15 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 22:39:22 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/27 06:12:36 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/27 14:27:08 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rsh02.h"
 
-unsigned long long	atoull(char *str)
+unsigned __int128	atoull(char *str)
 {
-	unsigned long long	var;
+	unsigned __int128	var;
 	unsigned int		i;
 
 	var = 0;

@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 19:59:02 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/27 06:14:34 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/27 14:24:22 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_dict				*dict;
-	unsigned long long	n;
+	unsigned __int128	n;
 	int					first;
 	char				*dict_path;
 	char				*num_str;

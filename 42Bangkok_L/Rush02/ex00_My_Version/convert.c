@@ -6,13 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 05:58:27 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/27 06:13:19 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/27 14:27:06 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rsh02.h"
 
-void	convert_number(unsigned long long n, t_dict *dict, int *first)
+void	convert_number(unsigned __int128 n, t_dict *dict, int *first)
 {
 	int	i;
 

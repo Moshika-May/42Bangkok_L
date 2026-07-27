@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 05:56:31 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/27 06:16:54 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/27 14:32:32 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,15 @@ void	sort_dict(t_dict *dict, int size)
 
 t_dict	*parse_dict(char *path)
 {
-	int		fd;
-	int		i = 0, j;
-	char	buf[4096];
-	t_dict	*dict;
-	int		start;
+	int				fd;
+	unsigned int	i;
+	unsigned int	j;
+	char			buf[4096];
+	t_dict			*dict;
+	int				start;
 
-	i = 0, j = 0;
+	i = 0;
+	j = 0;
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
 		return (NULL);
