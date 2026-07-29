@@ -6,10 +6,11 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 20:41:44 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/29 21:46:42 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/29 23:17:47 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_stock_str.h"
 #include <stddef.h>
 #include <stdlib.h>
 

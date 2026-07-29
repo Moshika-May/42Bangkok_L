@@ -6,10 +6,11 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 21:47:16 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/29 21:58:31 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/29 23:18:08 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_stock_str.h"
 #include <unistd.h>
 
 void	ft_putstr(char *str)
