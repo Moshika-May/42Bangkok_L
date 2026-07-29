@@ -6,13 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 17:11:46 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/29 20:29:27 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/07/30 00:19:06 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(Value) (((Value) < 0) ? -(Value) : (Value))
+# define ABS(Value) ((Value) * (((Value) > 0) - ((Value) < 0)))
 
 #endif
