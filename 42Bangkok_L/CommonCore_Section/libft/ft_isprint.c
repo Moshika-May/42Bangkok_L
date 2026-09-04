@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/13 23:40:42 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/13 23:47:48 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/04 12:54:03 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+int	ft_isprint(int ch)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < ' ')
-			return (0);
-		i++;
-	}
+	if (ch < ' ' || ch >= 127)
+		return (0);
 	return (1);
 }

@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 16:25:20 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 12:01:17 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/09/04 13:42:25 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/09/04 13:53:54 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int ch)
+void	ft_memcpy(void *restrict det, const void *restrict src)
 {
-	if ((ch < 'A' || ch > 'Z') && (ch < 'a' || ch > 'z'))
-	{
-		if ((ch < '0' || ch > '9'))
-			return (0);
-	}
-	return (1);
+	unsigned int	i;
 }

@@ -1,46 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/16 18:20:14 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 16:28:45 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/07/16 13:55:27 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/09/04 16:44:21 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-int	ft_atoi(const char *str)
+char	*ft_strnstr(const char *str, const char *to_find)
 {
 	unsigned int	i;
-	int				j;
-	int				k;
+	unsigned int	j;
 
+	if (to_find[0] == '\0')
+		return (str);
 	i = 0;
-	j = 1;
-	k = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (str[i] != '\0')
 	{
-		if (str[i] == '-')
-			j = -j;
+		j = 0;
+		while (str[i + j] == to_find[j] && to_find[j] != '\0')
+			j++;
+		if (to_find[j] == '\0')
+			return (&str[i]);
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		k = (k * 10) + (str[i] - '0');
-		i++;
-	}
-	return (k * j);
+	return (0);
 }
 /*
-int	main(int argc, char *argv[])
+int	main(void)
 {
-	if (argc == 2)
-		printf("%d", ft_atoi(argv[1]));
+	char	long_str[] = "Do you see me, I'm pretty sure not seek me";
+	char	find[] = "seek";
+
+	printf("%s\n", ft_strstr(long_str, find));
 	return (0);
 }
 */

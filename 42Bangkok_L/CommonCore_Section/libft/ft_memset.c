@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/16 13:55:27 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/20 11:34:53 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/09/01 11:12:23 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/09/04 11:10:47 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stddef.h>
 
-char	*ft_strstr(char *str, char *to_find)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
+	unsigned char	*p;
+	size_t			i;
 
-	if (to_find[0] == '\0')
-		return (str);
+	p = str;
 	i = 0;
-	while (str[i] != '\0')
+	while (i < n)
 	{
-		j = 0;
-		while (str[i + j] == to_find[j] && to_find[j] != '\0')
-			j++;
-		if (to_find[j] == '\0')
-			return (&str[i]);
+		p[i] = c;
 		i++;
 	}
-	return (0);
+	return (str);
 }
 /*
+#include <stdio.h>
+#include <string.h>
+
 int	main(void)
 {
-	char	long_str[] = "Do you see me, I'm pretty sure not seek me";
-	char	find[] = "seek";
+	char	str1[20] = "Hello World!";
+	char	str2[20] = "Hello World!";
 
-	printf("%s\n", ft_strstr(long_str, find));
+	ft_memset(str1, 'O', 5);
+	memset(str2, 'O', 5);
+	printf("ft_memset : %s\n", str1);
+	printf("memset    : %s\n", str2);
 	return (0);
 }
 */

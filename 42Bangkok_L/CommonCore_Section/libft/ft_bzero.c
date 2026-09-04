@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 16:25:20 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 12:01:17 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/09/04 12:55:50 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/09/04 13:40:30 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int ch)
+#include <stddef.h>
+
+void	ft_bzero(void *str, unsigned int n)
 {
-	if ((ch < 'A' || ch > 'Z') && (ch < 'a' || ch > 'z'))
+	unsigned char	*ptr;
+	unsigned int	i;
+
+	ptr = (unsigned char *)str;
+	i = 0;
+	while (i < n)
 	{
-		if ((ch < '0' || ch > '9'))
-			return (0);
+		ptr[i] = '\0';
+		i++;
 	}
-	return (1);
 }

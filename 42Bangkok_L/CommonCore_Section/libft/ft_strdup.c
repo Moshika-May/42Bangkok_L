@@ -6,9 +6,12 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/25 16:23:56 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/25 23:15:21 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/04 11:05:00 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
+#include <stdlib.h>
 
 unsigned int	len(const char *str)
 {
