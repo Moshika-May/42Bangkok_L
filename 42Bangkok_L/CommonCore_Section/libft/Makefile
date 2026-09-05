@@ -6,7 +6,7 @@
 #    By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/04 10:19:17 by kmahanin          #+#    #+#              #
-#    Updated: 2026/09/04 15:14:16 by kmahanin         ###   ########.fr        #
+#    Updated: 2026/09/06 01:20:23 by kmahanin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ ft_memset.c \
 ft_strlcpy.c \
 ft_isascii.c \
 ft_bzero.c \
-ft_memmove.c
+ft_memmove.c \
+ft_toupper.c \
+ft_tolower.c
 
 OBJS        = $(SRCS:.c=.o)
 HEADER      = libft.h

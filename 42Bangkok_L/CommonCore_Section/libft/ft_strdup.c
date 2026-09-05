@@ -6,16 +6,16 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/25 16:23:56 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 11:05:00 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/06 00:48:10 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
 
-unsigned int	len(const char *str)
+unsigned long	len(const char *str)
 {
-	unsigned int	i;
+	unsigned long	i;
 
 	i = 0;
 	while (str[i])
@@ -25,7 +25,7 @@ unsigned int	len(const char *str)
 
 char	*ft_strdup(const char *src)
 {
-	unsigned int	i;
+	unsigned long	i;
 	char			*dest;
 
 	i = 0;
@@ -40,3 +40,22 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main(int ac, char **av)
+{
+	char	*a;
+	char	*b;
+
+	(void)ac;
+	a = strdup(av[1]);
+	b = ft_strdup(av[1]);
+	printf("std: %s\n", a);
+	printf("my: %s\n", b);
+	free(a);
+	free(b);
+	return (0);
+}
+*/
