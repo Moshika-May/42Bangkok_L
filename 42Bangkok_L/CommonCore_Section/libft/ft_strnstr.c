@@ -6,30 +6,30 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 13:55:27 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 16:44:21 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/07 16:44:43 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stddef.h>
 
-char	*ft_strnstr(const char *str, const char *to_find)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
-	if (to_find[0] == '\0')
-		return (str);
+	if (!to_find)
+		return ((char *)str);
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i] && i < len)
 	{
 		j = 0;
-		while (str[i + j] == to_find[j] && to_find[j] != '\0')
+		while ((i + j) < len && str[i + j] == to_find[j] && to_find[j] != '\0')
 			j++;
 		if (to_find[j] == '\0')
-			return (&str[i]);
+			return ((char *)&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 int	main(void)
