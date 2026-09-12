@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 13:55:27 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/07 16:44:43 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/10 11:10:02 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	size_t	j;
 
 	if (!to_find)
+		return (NULL);
+	if (to_find[0] == '\0')
 		return ((char *)str);
 	i = 0;
 	while (str[i] && i < len)

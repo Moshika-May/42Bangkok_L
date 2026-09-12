@@ -6,13 +6,15 @@
 /*   By: kmahanin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/09 17:02:01 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/09 17:33:02 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/12 01:04:42 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
-	int	n;
+	size_t	n;
 
 	n = 0;
 	while (*str != '\0')
@@ -22,7 +24,7 @@ int	ft_strlen(char *str)
 	}
 	return (n);
 }
-//int	main(void)
+// int	main(void)
 //{
 //	ft_strlen("Safari");
 //	return (0);

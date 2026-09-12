@@ -6,15 +6,15 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 14:28:53 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/23 16:05:16 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/10 09:53:36 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stddef.h>
 
-unsigned int	len(char *str)
+size_t	len(const char *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,22 +22,22 @@ unsigned int	len(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t d_size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	dest_l;
-	unsigned int	src_l;
+	size_t	i;
+	size_t	j;
+	size_t	dest_l;
+	size_t	src_l;
 
 	dest_l = 0;
 	src_l = len(src);
-	while (dest[dest_l] != '\0' && dest_l < size)
+	while (dest[dest_l] != '\0' && dest_l < d_size)
 		dest_l++;
-	if (dest_l == size)
-		return (size + src_l);
+	if (dest_l == d_size)
+		return (d_size + src_l);
 	i = dest_l;
 	j = 0;
-	while (src[j] != '\0' && i < (size - 1))
+	while (src[j] != '\0' && i < (d_size - 1))
 	{
 		dest[i] = src[j];
 		j++;
@@ -46,13 +46,15 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (dest_l + src_l);
 }
+
+// #include <stdio.h>
 /*
 int	main(void)
 {
 	char	dst[21] = "strlcat is cat not";
 	char	src[] = " rabbit.";
 
-	printf("%d\n", ft_strlcat(dst, src, 21));
+	printf("%ld\n", ft_strlcat(dst, src, 21));
 	printf("%s\n", dst);
 	return (0);
 }

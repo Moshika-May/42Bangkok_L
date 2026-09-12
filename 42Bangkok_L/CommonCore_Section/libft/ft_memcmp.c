@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/15 17:16:47 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/10 10:23:31 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/09/12 01:52:50 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/09/12 01:58:41 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
+	size_t				i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n && s1[i] != '\0' && s1[i] == s2[i])
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
+	while (n > i)
+	{
+		if (str1[i] != str2[i])
+			return ((int)(str1[i] - str2[i]));
 		i++;
-	if (i == n)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d", ft_strncmp("Help_myself", "Help_Myself", 7));
+	}
 	return (0);
 }
-*/

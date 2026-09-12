@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/15 17:16:47 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/10 10:23:31 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/09/12 00:16:15 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/09/12 00:49:17 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n && s1[i] != '\0' && s1[i] == s2[i])
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 		i++;
-	if (i == n)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
+	return (NULL);
 }
 /*
 #include <stdio.h>
+#include <string.h>
 
-int	main(void)
+int	main(int ac, char **av)
 {
-	printf("%d", ft_strncmp("Help_myself", "Help_Myself", 7));
+	(void)ac;
+	printf("real: %s\n", strchr(av[1], 'a'));
+	printf("me: %s\n", ft_strchr(av[1], 'a'));
 	return (0);
 }
 */
