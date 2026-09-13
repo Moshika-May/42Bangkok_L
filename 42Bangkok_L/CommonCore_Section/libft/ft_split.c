@@ -6,13 +6,99 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 22:51:40 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/07/29 00:40:06 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/12 23:35:51 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
 
+static size_t	word_len(char const *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+static size_t	len_words(const char *str, char sep)
+{
+	size_t	i;
+	size_t	words;
+
+	words = 0;
+	i = 0;
+	while (str[i])
+	{
+		while (str[i] && str[i] == sep)
+			i++;
+		if (str[i] && str[i] != sep)
+		{
+			words++;
+			while (str[i] && str[i] != sep)
+				i++;
+		}
+	}
+	return (words);
+}
+
+static char	*fill_word(char const *s, size_t len)
+{
+	char	*word;
+	size_t	i;
+
+	word = malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
+static void	free_split(char **str_split, size_t i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(str_split[i]);
+	}
+	free(str_split);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**str_split;
+	size_t	words;
+	size_t	i;
+	size_t	j;
+
+	words = len_words(s, c);
+	str_split = malloc(sizeof(char *) * (words + 1));
+	if (!str_split)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (i < words)
+	{
+		while (s[j] == c)
+			j++;
+		str_split[i] = fill_word(s + j, word_len(s + j, c));
+		if (!str_split[i])
+			return (free_split(str_split, i), NULL);
+		j += word_len(s + j, c);
+		i++;
+	}
+	str_split[i] = NULL;
+	return (str_split);
+}
+/*
 unsigned int	is_sep(char chr, char *chatset)
 {
 	unsigned int	i;
@@ -66,7 +152,7 @@ static char	*strduplicate(char *str, unsigned int n)
 	return (word);
 }
 
-char	**ft_split(char *str, char *chatset)
+char	**ft_split(char const *s, char *c)
 {
 	char			**word;
 	unsigned int	i;
@@ -92,6 +178,7 @@ char	**ft_split(char *str, char *chatset)
 	word[j] = NULL;
 	return (word);
 }
+*/
 /*
 #include <stdio.h>
 
@@ -103,7 +190,7 @@ int	main(int c, char **v)
 	i = 0;
 	if (c == 3)
 	{
-		result = ft_split(v[1], v[2]);
+		result = ft_split(v[1], v[2][0]);
 		if (!result)
 			return (1);
 		while (result[i])
