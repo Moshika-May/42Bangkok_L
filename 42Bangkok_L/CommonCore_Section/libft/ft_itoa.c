@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 00:20:07 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/13 14:05:30 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/14 10:27:27 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static size_t	int_len(int n)
 	i = 0;
 	j = n;
 	sign = 1;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		j = -j;
@@ -36,17 +38,11 @@ static size_t	int_len(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+static char	*convert(int n, char *a, size_t len)
 {
 	size_t	i;
 	long	j;
-	size_t	len;
-	char	*a;
 
-	len = int_len(n);
-	a = malloc(sizeof(char) * (len + 1));
-	if (!a)
-		return (NULL);
 	j = n;
 	i = len;
 	a[i] = '\0';
@@ -62,6 +58,18 @@ char	*ft_itoa(int n)
 		i--;
 	}
 	return (a);
+}
+
+char	*ft_itoa(int n)
+{
+	size_t	len;
+	char	*a;
+
+	len = int_len(n);
+	a = malloc(sizeof(char) * (len + 1));
+	if (!a)
+		return (NULL);
+	return (convert(n, a, len));
 }
 /*
 #include <stdio.h>
