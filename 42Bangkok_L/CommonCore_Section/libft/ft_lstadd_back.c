@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/15 18:03:28 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/18 19:56:31 by kmahanin         ###   ########.fr       */
+/*   Created: 2026/09/18 19:08:54 by kmahanin          #+#    #+#             */
+/*   Updated: 2026/09/18 19:57:41 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;
+	while (lst->next)
+		lst = lst->next;
 	new->next = *lst;
 	*lst = new;
 }
