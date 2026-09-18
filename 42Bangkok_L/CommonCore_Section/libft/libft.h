@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 19:14:36 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/18 19:53:27 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 01:55:14 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <stddef.h>
 # include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
 
 typedef struct s_list
 {

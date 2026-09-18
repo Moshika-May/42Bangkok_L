@@ -6,13 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 18:20:14 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 16:28:45 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 01:28:39 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	unsigned int	i;
 	int				j;
@@ -21,17 +21,17 @@ int	ft_atoi(const char *str)
 	i = 0;
 	j = 1;
 	k = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			j = -j;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		k = (k * 10) + (str[i] - '0');
+		k = (k * 10) + (nptr[i] - '0');
 		i++;
 	}
 	return (k * j);

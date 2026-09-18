@@ -6,18 +6,18 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 12:55:50 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 13:40:30 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 01:32:55 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	ft_bzero(void *str, unsigned int n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	unsigned int	i;
+	size_t			i;
 
-	ptr = (unsigned char *)str;
+	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
