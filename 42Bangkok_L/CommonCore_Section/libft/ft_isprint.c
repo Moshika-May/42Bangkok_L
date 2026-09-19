@@ -6,9 +6,11 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/13 23:40:42 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 12:54:03 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 15:26:34 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int ch)
 {

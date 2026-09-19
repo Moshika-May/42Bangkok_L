@@ -6,14 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 14:30:47 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/12 16:10:50 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 13:07:52 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_in(const char word, const char *in)
+static size_t	ft_in(const char word, const char *in)
 {
 	size_t	i;
 
@@ -27,7 +26,7 @@ size_t	ft_in(const char word, const char *in)
 	return (0);
 }
 
-size_t	len(const char *str)
+static size_t	len(const char *str)
 {
 	size_t	i;
 
@@ -37,7 +36,8 @@ size_t	len(const char *str)
 	return (i);
 }
 
-char	*str_add(char *str_trim, size_t t_start, size_t t_len, const char *s1)
+static char	*str_add(char *str_trim, size_t t_start, size_t t_len,
+		const char *s1)
 {
 	size_t	i;
 

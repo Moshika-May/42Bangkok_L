@@ -6,7 +6,7 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 12:22:41 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/18 12:37:42 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 13:12:33 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ unsigned int	ft_lstsize(t_list *lst)
 	i = 0;
 	while (lst)
 	{
-		lst = lst->new;
+		lst = lst->next;
 		i++;
 	}
 	return (i);

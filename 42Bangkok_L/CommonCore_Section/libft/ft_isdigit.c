@@ -6,9 +6,11 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/13 23:13:02 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 11:59:53 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 15:26:27 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int ch)
 {

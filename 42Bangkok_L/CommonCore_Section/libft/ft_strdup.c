@@ -6,14 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/25 16:23:56 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/06 00:48:10 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 13:05:55 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
-unsigned long	len(const char *str)
+static unsigned long	len(const char *str)
 {
 	unsigned long	i;
 

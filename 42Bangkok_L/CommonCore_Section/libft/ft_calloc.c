@@ -6,14 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 15:33:25 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/19 01:32:53 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 15:21:46 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+static void	a_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 	size_t			i;
@@ -38,6 +37,6 @@ void	*ft_calloc(size_t n, size_t size)
 	v = malloc(i_size);
 	if (!v)
 		return (NULL);
-	ft_bzero(v, i_size);
+	a_bzero(v, i_size);
 	return (v);
 }

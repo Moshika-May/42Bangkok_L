@@ -6,14 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 02:30:10 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/12 03:10:08 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 13:06:42 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
+static size_t	f_len(const char *str)
 {
 	size_t	i;
 
@@ -31,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
+	s_len = f_len(s);
 	if (start > s_len)
 		start = s_len;
 	if (len > s_len - start)

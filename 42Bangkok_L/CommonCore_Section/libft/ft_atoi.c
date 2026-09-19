@@ -6,11 +6,12 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 18:20:14 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/19 01:28:39 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 15:20:36 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

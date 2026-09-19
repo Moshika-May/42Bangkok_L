@@ -6,12 +6,11 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 00:20:07 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/14 10:27:27 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 15:26:49 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static size_t	int_len(int n)
 {

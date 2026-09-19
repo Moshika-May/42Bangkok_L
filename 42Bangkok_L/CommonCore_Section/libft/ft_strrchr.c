@@ -6,13 +6,13 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 00:16:15 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/12 01:13:17 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 13:06:17 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-size_t	len(const char *str)
+static size_t	len(const char *str)
 {
 	size_t	i;
 

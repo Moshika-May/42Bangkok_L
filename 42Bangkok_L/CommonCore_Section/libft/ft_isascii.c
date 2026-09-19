@@ -6,9 +6,11 @@
 /*   By: kmahanin <kmahanin@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 11:31:57 by kmahanin          #+#    #+#             */
-/*   Updated: 2026/09/04 12:02:23 by kmahanin         ###   ########.fr       */
+/*   Updated: 2026/09/19 15:26:14 by kmahanin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int ch)
 {
